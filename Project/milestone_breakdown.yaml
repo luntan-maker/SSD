@@ -1,0 +1,38 @@
+Milestones:
+    - Title: SysMLV2 Deliverable
+      Deliverable:
+        Tangible: 
+          - SysMLV2 document specifying SSD operations and structure
+        Intangible:
+          - Learn how to use KerML and SysMLV2
+          - Understand the processes and structure of an SSD
+
+      Goals:
+      - Title: Overarching identify and document
+        Specific: Identify and document overarching SSD process that can be elaborated later on with structure and further processes
+        Measurable: Goal will be achieved when we have an outline of the SSD process documented in model.sysml .
+        Actionable: Skill is the only thing lacking, and additional time is cushioning for the skill to develop.
+        Relevant: By documenting the overarching process we frame our future SysML efforts within SysML.
+        Timely: It is aimed to be done within the first day 06/18/25
+        Sub-goals: []
+      - Title: Drill down into process
+        Specific: Take the read and write use cases and expand upon them such that I can find hardware to construct the processes.
+        Measurable: Goal will be achieved once process has been refined sufficiently enough for off the shelf parts to be allocated in a roughly one-to-one correspondence with function
+        Actionable: Skill is again lackinging, but through time and perseverence, it is possible.
+        Relevant: By taking the overarching needs in sysml and drilling down into the process can we start to make headway on hardware description of an SSD.
+        Timely: It is aimed to be done within the first day 06/18/25
+        Sub-goals: []
+
+
+    - Title: KiCad Deliverable
+      Deliverable:
+        Tangible: 
+        Intangible: 
+      Goals:
+      - Title: 
+        Specific:
+        Measurable:
+        Actionable:
+        Relevant:
+        Timely:
+        Sub-goals: []

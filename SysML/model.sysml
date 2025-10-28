@@ -39,14 +39,51 @@ package SSDPackage {
         end [1] part toComponent : ElectronicComponent;
     }
     part SSD{
-        part NANDFlashMemoryController{
+        part Controller{
             part HardwareInterfaceLayer;
-            part FlashTranslationLayer;
-        };
-        part NANDMemory{
-            attribute memory;
+            part FlashTranslationLayer{
+                action ReconcileLogicalToPhysical;
+                action FlashMemoryToPages;
+                action WriteInPlace;
+                action ManageErased;
 
-        };
+                action MergeEmptyPages;
+                action ReadPage;
+                action DeleteBlock;
+
+                part LogicalPhysicalBlockMap{
+                    attribute logicalBlockNumber : Integer;
+                    attribute physicalBlockNumber : Integer;
+                }
+                part LogicalPhysicalPageMap{
+                    attribute logicalPageNumber : Integer;
+                    attribute physicalPageNumber : Integer;
+                }
+
+            }
+        }
+        part FlashMemory{
+            part MemoryCellArray{
+                part MemoryCell{
+                    part Blocks{
+                        part Block{
+                            attribute physicalBlockNumber : Integer;
+                            part Pages{
+                                part Page{
+                                    attribute physicalPageNumber : Integer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            part FATRegion;
+            part DataRegion;
+            part LogRegion;
+            part MetaRegion;
+
+        }
         connection controller2memory[*] : Trace 
             connect NANDFlashMemoryController to NANDMemory;
     }
@@ -54,6 +91,9 @@ package SSDPackage {
 
 }
 
+part Computer{
+    occurrence Computation;
+}
 
 // So the whole ssd is controlled by the nand flash controller
 // https://www.delkin.com/blog/understanding-nand-flash-based-ssd-drives-and-the-flash-controller/

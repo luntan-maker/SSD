@@ -109,3 +109,4 @@ part Computer{
 // Reference
 // https://sim4edu.com/reading/kerml-sysml#IntroDynamicsSysML
 // https://learnxinyminutes.com/yaml/
+//https://patents.google.com/patent/US8122193B2/en?q=(solid+state+drive)&before=priority:20050101
